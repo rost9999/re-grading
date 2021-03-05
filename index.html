@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COOP TSD</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <select id="mag">
+      <option value="none">Виберіть магазин</option>
+      <option value="БЕРЕЖАНИ">БЕРЕЖАНИ</option>
+      <option value="БІЛОКРИНИЦЯ">БІЛОКРИНИЦЯ</option>
+      <option value="БІЛЬЧЕ-ЗОЛОТЕ">БІЛЬЧЕ-ЗОЛОТЕ</option>
+      <option value="БОРЩІВ">БОРЩІВ</option>
+      <option value="ДАРАХІВ">ДАРАХІВ</option>
+      <option value="ЗАЛІЗЦІ">ЗАЛІЗЦІ</option>
+      <option value="ЗАЛІЩИКИ №1">ЗАЛІЩИКИ №1</option>
+      <option value="ЗАЛІЩИКИ №2">ЗАЛІЩИКИ №2</option>
+      <option value="ІВАНКІВ">ІВАНКІВ</option>
+      <option value="КАМ’ЯНКИ">КАМ’ЯНКИ</option>
+      <option value="КОЗАЧЧИНА">КОЗАЧЧИНА</option>
+      <option value="ЛАНІВЦІ">ЛАНІВЦІ</option>
+      <option value="ЛУБ’ЯНК">ЛУБ’ЯНКИ</option>
+      <option value="МАЯК">МАЯК</option>
+      <option value="ОЗЕРНА">ОЗЕРНА</option>
+      <option value="ОЗЕРЯНИ">ОЗЕРЯНИ</option>
+      <option value="ОСТРІВ">ОСТРІВ</option>
+      <option value="ПОЧАЇВ">ПОЧАЇВ</option>
+      <option value="РОСОХАЧ">РОСОХАЧ</option>
+      <option value="СКАЛА-ПОДІЛЬСЬКА">СКАЛА-ПОДІЛЬСЬКА</option>
+      <option value="СКОРИКИ">СКОРИКИ</option>
+      <option value="ТЕРЕБОВЛЯ">ТЕРЕБОВЛЯ</option>
+    </select>
+    <button id="choice_mag">Вибрати</button>
+    <br />
+    <lable id="mag_lable">Магазин: </lable>
+    <br />
+    <br /><br />
+    <input
+      id="search"
+      type="text"
+      placeholder="артикул"
+      onblur="this.focus()"
+      autofocus
+    />
+    <input type="text" placeholder="Кількість" id="incount" />
+    <button id="button">Скан</button>
+    <table id="table1">
+      <tr>
+        <th>Артикул</th>
+        <th id="iferror">Назва</th>
+        <!-- <th>Кількість</th> -->
+        <th>Факт</th>
+      </tr>
+    </table>
+    <button id="send_report">скачати звіт</button>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
