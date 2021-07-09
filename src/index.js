@@ -1,4 +1,4 @@
-let mag = 'Не вибрано';
+let mag = "Не вибрано";
 function download() {
   let filename = "report.txt";
   let text = get_text();
@@ -17,11 +17,11 @@ function download() {
   document.body.removeChild(element);
 }
 const get_text = () => {
-  let text = "Штрих-код Артикул	Назва	Кількість\nКонтрагент "+mag+'\n';
+  let text = "Штрих-код Артикул	Назва	Кількість\nКонтрагент " + mag + "\n";
   for (let a in result) {
     text +=
-    getbarcode[a][0].trim() +
-     "\t" +
+      getbarcode[a][0].trim() +
+      "\t" +
       a +
       "\t" +
       jbarcode[a][0].trim() +
@@ -73,6 +73,7 @@ const clear = () => {
 const inputFocus = () => {
   document.getElementById("incount").focus();
 };
+let numberColon = 0;
 const search = () => {
   let input = document.getElementById("search").value;
   let inputCount = document.getElementById("incount").value;
@@ -84,12 +85,15 @@ const search = () => {
   if (input in jbarcode) {
     console.log(input);
     let colon = document.createElement("tr");
+    let NumberHTML = document.createElement("th");
     let bar_code = document.createElement("th");
     let aricle = document.createElement("th");
     let name = document.createElement("th");
     // let count = document.createElement("th");
     let fact = document.createElement("th");
-    
+
+    numberColon += 1;
+    NumberHTML.innerHTML = numberColon;
     aricle.innerHTML = input.trim();
     name.innerHTML = jbarcode[input][0].trim();
     bar_code.innerHTML = getbarcode[input][0].trim();
@@ -111,6 +115,7 @@ const search = () => {
     }
     console.log(result);
 
+    colon.append(NumberHTML);
     colon.append(bar_code);
     colon.append(aricle);
     colon.append(name);
