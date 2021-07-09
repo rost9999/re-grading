@@ -109,9 +109,9 @@ const search = () => {
       jbarcode[input][1] +
       "\n"; */
     if (!(input in result)) {
-      result[input] = parseInt(inputCount);
+      result[input] = parseFloat(inputCount.replace(",", "."));
     } else {
-      result[input] += parseInt(inputCount);
+      result[input] += parseFloat(inputCount.replace(",", "."));
     }
     console.log(result);
 
